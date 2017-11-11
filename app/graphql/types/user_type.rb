@@ -5,11 +5,12 @@ Types::UserType = GraphQL::ObjectType.define do
 
   # TODO: remove me
   #field :id, types.ID
-  field :id, types.ID 
-  field :email do
+  #field :id, types.Int
+  field :city do
    type types.String
    resolve -> (obj,args,cxt){
-      obj.email + "Awesome"
+      obj.city + " Awesome" 
   }
   end
+  field :address, types.String
 end
